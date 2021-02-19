@@ -1,4 +1,4 @@
-REM @ECHO OFF
+@ECHO OFF
 SETLOCAL EnableDelayedExpansion
 SET /A LABEL=0
 SET /A INDEX=0
