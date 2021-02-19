@@ -5,6 +5,7 @@
 
 ## Model
 * [TensorFlow Model Garden](https://github.com/tensorflow/models)
+* [Caffe Model Zoo](https://github.com/SnailTyan/caffe-model-zoo)
 * [Netscope](https://ethereon.github.io/netscope/quickstart.html) - caffe ptototxt model visualization
 
 ## Installation
