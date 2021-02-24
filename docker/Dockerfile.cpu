@@ -10,7 +10,7 @@
 # caffe         latest (git)
 # ==================================================================
 
-FROM nvidia/cuda:10.1-cudnn7-devel-ubuntu18.04
+FROM ubuntu:18.04
 ENV LANG C.UTF-8
 RUN APT_INSTALL="apt-get install -y --no-install-recommends" && \
     PIP_INSTALL="python -m pip --no-cache-dir install --upgrade" && \
@@ -50,8 +50,8 @@ RUN APT_INSTALL="apt-get install -y --no-install-recommends" && \
 
     $GIT_CLONE https://github.com/pjreddie/darknet.git ~/darknet && \
     cd ~/darknet && \
-    sed -i 's/GPU=0/GPU=1/g' ~/darknet/Makefile && \
-    sed -i 's/CUDNN=0/CUDNN=1/g' ~/darknet/Makefile && \
+    sed -i 's/GPU=0/GPU=0/g' ~/darknet/Makefile && \
+    sed -i 's/CUDNN=0/CUDNN=0/g' ~/darknet/Makefile && \
     make -j"$(nproc)" && \
     cp ~/darknet/include/* /usr/local/include && \
     cp ~/darknet/*.a /usr/local/lib && \
@@ -114,7 +114,7 @@ RUN APT_INSTALL="apt-get install -y --no-install-recommends" && \
 # ------------------------------------------------------------------
 
     $PIP_INSTALL \
-        tensorflow-gpu==1.15 \
+        tensorflow==1.15 \
         && \
 
 # ==================================================================
@@ -163,7 +163,7 @@ RUN APT_INSTALL="apt-get install -y --no-install-recommends" && \
 
     apt-get update && \
     DEBIAN_FRONTEND=noninteractive $APT_INSTALL \
-        caffe-cuda \
+        caffe-cpu \
         && \
 # ==================================================================
 # config & cleanup
