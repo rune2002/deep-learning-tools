@@ -1,0 +1,3 @@
+*.png
+./lmdb
+./data
