@@ -10,8 +10,8 @@ DATA=../data
 # already been resized using another tool.
 RESIZE=true
 if $RESIZE; then
-  RESIZE_HEIGHT=16
-  RESIZE_WIDTH=16
+  RESIZE_HEIGHT=32
+  RESIZE_WIDTH=32
 else
   RESIZE_HEIGHT=0
   RESIZE_WIDTH=0

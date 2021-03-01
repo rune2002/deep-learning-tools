@@ -21,7 +21,7 @@ Step 2. Build Dockerfile in docker directory
  [cuda](https://developer.nvidia.com/cuda-zone)    | 10.1                 | X                  |
  [cudnn](https://developer.nvidia.com/cudnn)       | v7                   | X                  |
  [tensorflow](http://www.tensorflow.org)           | 1.15                 | 1.15               |
- [keras](https://keras.io)                         | latest               | latest             |
+ [keras](https://keras.io)                         | 2.3.1                | 2.3.1              |
  [caffe](http://caffe.berkeleyvision.org)          | latest               | latest             |
  [darknet](https://pjreddie.com/darknet/)          | latest               | latest             |
 

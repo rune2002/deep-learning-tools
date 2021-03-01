@@ -5,7 +5,7 @@
 # python        3.6    (apt)
 # jupyter       latest (pip)
 # tensorflow    1.15   (pip)
-# keras         latest (pip)
+# keras         2.3.1  (pip)
 # opencv        4.5.1  (git)
 # caffe         latest (git)
 # ==================================================================
@@ -123,7 +123,7 @@ RUN APT_INSTALL="apt-get install -y --no-install-recommends" && \
 
     $PIP_INSTALL \
         h5py \
-        keras \
+        keras==2.3.1 \
         && \
 
 # ==================================================================
